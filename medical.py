@@ -1,14 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # U.S. Medical Insurance Costs
+# # U.S. Medical Insurance Costs - Analyze the data set as you wish
 
-# # Analyze the data set as you wish
-
-# In[21]:
-
-
-#storing the data set into a list
+#stores the data set into a list
 import csv
 data = []
 with open ('insurance.csv', 'r') as csv_file:
@@ -19,18 +14,14 @@ with open ('insurance.csv', 'r') as csv_file:
 
 #print(data)
 
-
 # # Analyze the data set and identify the average insurance cost of smokers and non smokers.
-
-# In[22]:
-
 
 def insurance(data):
     count = 0
     ns_cost = 0
     s_cost = 0
     
-# calculate the average insurance cost for smokers/non smokers
+# calculate the average insurance cost smokers/non smokers
     for person in data:
         if person['smoker'] == 'yes':
             count += 1
@@ -49,9 +40,6 @@ print(insurance(data))
 
 
 # # Identify the average insurance cost of a smoker female vs non smoker female
-
-# In[27]:
-
 
 def female_insurance(data):
     count = 0
@@ -72,11 +60,7 @@ def female_insurance(data):
     
 print(female_insurance(data))
 
-
 # # Identify the average insurance cost of a smoker male vs non smoker male
-
-# In[25]:
-
 
 def male_insurance(data):
     count = 0
@@ -97,17 +81,4 @@ def male_insurance(data):
     
 print(male_insurance(data))
 
-
 # # Based on the analysis above we can say that on average, a smoker will have to pay more in insurance than a non smoker
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
